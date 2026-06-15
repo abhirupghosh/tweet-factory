@@ -1,0 +1,29 @@
+{
+  "name": "tweet-factory",
+  "version": "0.2.0",
+  "description": "Learn from your X activity and draft algorithm-optimized tweets in your voice — an OpenTUI app with in-app LLM generation.",
+  "type": "module",
+  "bin": {
+    "tf": "./src/index.ts",
+    "tweet-factory": "./src/index.ts"
+  },
+  "scripts": {
+    "tf": "bun run src/index.ts",
+    "build": "bun build --compile src/index.ts --outfile tf",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.0",
+    "@opentui/core": "0.3.0",
+    "@opentui/react": "0.3.0",
+    "openai": "^4.77.0",
+    "react": "^19.2.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "bun-types": "^1.3.14",
+    "typescript": "^5.7.0"
+  }
+}

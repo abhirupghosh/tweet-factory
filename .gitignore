@@ -1,0 +1,39 @@
+# === SECRETS — never commit ===
+.env
+.tokens.json
+
+# === Personal data (per-user, generated) ===
+tweets.db
+# your filled-in persona (the template is committed)
+persona/PERSONA.md
+# your interaction deltas + processed-id state (keep the dir, ignore contents)
+flush/*
+!flush/.gitkeep
+# generated draft batches (keep the dir, ignore contents)
+onboarding.json
+drafts/*
+!drafts/.gitkeep
+
+# === Personal analysis outputs (per-user, generated) ===
+# NOTE: X_ALGORITHM_BOOST_PLAYBOOK.md IS committed (it's the public scoring reference).
+VOICE_AND_TASTE_ANALYSIS.md
+DRAFT_TWEETS.md
+_SUPERSEDED_*
+
+# === Cloned upstream repo (large, reclonable) ===
+x-algorithm/
+
+# === Runtime (deploy/backup) ===
+logs/
+backups/
+
+# === Bun / TypeScript ===
+node_modules/
+# compiled binaries (built by CI / `bun run build`)
+/tf
+/tf-*
+tf-darwin-*
+tf-linux-*
+
+# === OS ===
+.DS_Store
